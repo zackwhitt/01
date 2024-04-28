@@ -25,8 +25,8 @@ def get_kernel_messages():
         output, _ = process.communicate()
         return output.decode("utf-8")
     elif current_platform == "Linux":
-        with open("/var/log/dmesg", "r") as file:
-        # with open("/usr/bin/dmesg", "r") as file:
+        # with open("/var/log/dmesg", "r") as file:
+        with open("/usr/bin/dmesg", "r") as file:
             return file.read()
     else:
         logger.info("Unsupported platform.")
