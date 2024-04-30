@@ -188,7 +188,8 @@ def configure_interpreter(interpreter: OpenInterpreter):
     interpreter.llm.supports_vision = True
     interpreter.shrink_images = True  # Faster but less accurate
 
-    interpreter.llm.model = "gpt-4-turbo"
+    # interpreter.llm.model = "gpt-4-turbo"
+    interpreter.llm.model = "gpt-3.5-turbo"
 
     interpreter.llm.supports_functions = False
     interpreter.llm.context_window = 110000
